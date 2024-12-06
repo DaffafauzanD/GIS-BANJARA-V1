@@ -29,10 +29,10 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="#">Home</a>
+                        <a href="/home">Home</a>
                     </li>
                     <li>
-                        <a href="browse.html">Browse</a>
+                        <a href="#">Browse</a>
                     </li>
 
                 </ul>
@@ -62,7 +62,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="/about">About</a>
                     </li>
 
                 </ul>
