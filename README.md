@@ -29,11 +29,11 @@ Karna kita pake laravel nya sudah ada jadi tinggal **Pull** aja
 
 - Buat folder file baru di dalam **Laragon/www**
     - Struktur folder laragon
-    ![alt text](image-2.png)
+    ![alt text](Md-Image/image-2.png)
     - lalu buat folder **laravel11**
-    ![alt text](image-3.png)
+    ![alt text](Md-Image/image-3.png)
 - Kalau dah bisa tinggal pull aja lewat git bash atau download & extract 
 - jika sudah tinggal execute command `npm install` di terminal vscode 
-:memo: **Note:** *perlu diperhatikan struktur folder sebelum `npm isntall`*.![alt text](image-4.png)
+:memo: **Note:** *perlu diperhatikan struktur folder sebelum `npm isntall`*.![alt text](Md-Image/image-4.png)
 - Sudah terinstall tinggal coba di running `php artisan serve`
 
