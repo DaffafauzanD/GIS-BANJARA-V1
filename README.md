@@ -34,7 +34,12 @@ Karna kita pake laravel, dan sudah ada jadi tinggal **Pull** aja
     - lalu buat folder **laravel11**
     ![alt text](Md-Image/image-3.png)
 - Kalau dah bisa tinggal pull aja lewat git bash atau download & extract 
-- jika sudah tinggal execute command `npm install` di terminal vscode 
-:memo: **Note:** *perlu diperhatikan struktur folder sebelum `npm isntall`*.![alt text](Md-Image/image-4.png)
+- jika sudah tinggal execute command `npm install` di terminal vscode
+
+![alt text](Md-Image/image-4.png)
+--
+:memo: **Note:** *perlu diperhatikan struktur folder sebelum `npm isntall`*.
+
+
 - Sudah terinstall tinggal coba di running `php artisan serve`
 
