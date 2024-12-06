@@ -9,14 +9,15 @@
 
 # Instalasi
 ## Aplikasi yang dibutuhkan
-[!NOTE]
-Kalau masih bingung cara install nodejs, php, etc, di laragon nya gimana bisa lihat tutorial youtube [di sini](https://www.youtube.com/watch?v=nW60yGRoUrs&list=PLFIM0718LjIW1Xb7cVj7LdAr32ATDQMdr&index=2)
 
 - Node Js version 22.12.0
 - Composer
 - php version 8.4.1 **[link php](https://windows.php.net/download#php-8.4)** download yang **Thread Safe**
 - laragon [link laragon](https://laragon.org/download/)
 - Table Plus [link table plus](https://tableplus.com/download)
+
+:memo: **Note:** cara install nodejs, php, etc, di laragon nya gimana bisa lihat tutorial youtube [di sini](https://www.youtube.com/watch?v=nW60yGRoUrs&list=PLFIM0718LjIW1Xb7cVj7LdAr32ATDQMdr&index=2).
+
 
 
 
@@ -25,7 +26,7 @@ Kalau masih bingung cara install nodejs, php, etc, di laragon nya gimana bisa li
 
 ## Cara install Laravel
 
-Karna kita pake laravel nya sudah ada jadi tinggal **Pull** aja
+Karna kita pake laravel, dan sudah ada jadi tinggal **Pull** aja
 
 - Buat folder file baru di dalam **Laragon/www**
     - Struktur folder laragon
