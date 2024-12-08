@@ -18,7 +18,8 @@ html, body {
 	max-width: none;
 }
 
-#map-canvas, #map-inset * {.box-sizing(content-box);
+#map-canvas, #map-inset * {
+	box-sizing: content-box;
 }
 
 #sidemenu {
@@ -123,4 +124,12 @@ html, body {
 
 body.modal-open {
 	margin-right: 0;
+}
+
+.navbar-default {
+	background-color: #E5E1DA;
+}
+
+.well {
+	background-color: #E5E1DA;
 }

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
-        <title>GIS Application - Extended Template by Cyber313</title>
+        <title>GIS Application</title>
         <meta name="author" content="luckynvic@gmail.com">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         
@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Cyber GIS</a>
+                <a class="navbar-brand" href="#">GIS - BJR</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,7 +68,6 @@
                 </ul>
                 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><p class="navbar-text">Signed in as Cyber</p></li>
                     <li>
                         <a href="login.html">Login</a>
                     </li>
@@ -101,7 +100,7 @@
                         <a>Sort By</a>
                     </div>
                 </div>
-                <div class="list-group point-list-view">
+                <div class="list-group point-list-view" id="list-group-container">
                     <a href="#"class="list-group-item point-item"> <h4 class="list-group-item-heading" >Location 1</h4>
                     <p class="list-group-item-text">
                         Location Address
