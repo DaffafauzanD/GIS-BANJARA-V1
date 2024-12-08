@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "f45eb0127784045bea909d88d64262ec",
+=======
+    "content-hash": "626b9e7ddd47fb7eff9aaa53cce0c9ad",
+>>>>>>> Aplication-Gis
     "packages": [
         {
             "name": "brick/math",
@@ -1831,6 +1835,7 @@
         },
         {
             "name": "monolog/monolog",
+<<<<<<< HEAD
             "version": "3.8.0",
             "source": {
                 "type": "git",
@@ -1841,6 +1846,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Seldaek/monolog/zipball/32e515fdc02cdafbe4593e30a9350d486b125b67",
                 "reference": "32e515fdc02cdafbe4593e30a9350d486b125b67",
+=======
+            "version": "3.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
+                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
+>>>>>>> Aplication-Gis
                 "shasum": ""
             },
             "require": {
@@ -1918,7 +1935,11 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/Seldaek/monolog/tree/3.8.0"
+=======
+                "source": "https://github.com/Seldaek/monolog/tree/3.8.1"
+>>>>>>> Aplication-Gis
             },
             "funding": [
                 {
@@ -1930,7 +1951,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-11-12T13:57:08+00:00"
+=======
+            "time": "2024-12-05T17:15:07+00:00"
+>>>>>>> Aplication-Gis
         },
         {
             "name": "nesbot/carbon",
@@ -5622,6 +5647,7 @@
     ],
     "packages-dev": [
         {
+<<<<<<< HEAD
             "name": "brianium/paratest",
             "version": "v7.6.0",
             "source": {
@@ -5762,6 +5788,8 @@
             "time": "2024-01-30T19:34:25+00:00"
         },
         {
+=======
+>>>>>>> Aplication-Gis
             "name": "fakerphp/faker",
             "version": "v1.24.1",
             "source": {
@@ -5825,6 +5853,7 @@
             "time": "2024-11-21T13:46:39+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "fidry/cpu-core-counter",
             "version": "1.2.0",
             "source": {
@@ -5886,6 +5915,8 @@
             "time": "2024-08-06T10:04:20+00:00"
         },
         {
+=======
+>>>>>>> Aplication-Gis
             "name": "filp/whoops",
             "version": "2.16.0",
             "source": {
@@ -6008,6 +6039,7 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "jean85/pretty-package-versions",
             "version": "2.1.0",
             "source": {
@@ -6067,6 +6099,8 @@
             "time": "2024-11-18T16:19:46+00:00"
         },
         {
+=======
+>>>>>>> Aplication-Gis
             "name": "laravel/pail",
             "version": "v1.2.1",
             "source": {
@@ -6514,6 +6548,7 @@
             "time": "2024-10-15T16:06:32+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "pestphp/pest",
             "version": "v3.5.1",
             "source": {
@@ -6912,6 +6947,8 @@
             "time": "2024-09-22T07:54:40+00:00"
         },
         {
+=======
+>>>>>>> Aplication-Gis
             "name": "phar-io/manifest",
             "version": "2.0.4",
             "source": {
@@ -7030,6 +7067,7 @@
             "time": "2022-02-21T01:04:05+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "phpdocumentor/reflection-common",
             "version": "2.2.0",
             "source": {
@@ -7252,6 +7290,8 @@
             "time": "2024-10-13T11:29:49+00:00"
         },
         {
+=======
+>>>>>>> Aplication-Gis
             "name": "phpunit/php-code-coverage",
             "version": "11.0.7",
             "source": {
@@ -7576,6 +7616,7 @@
         },
         {
             "name": "phpunit/phpunit",
+<<<<<<< HEAD
             "version": "11.4.3",
             "source": {
                 "type": "git",
@@ -7586,6 +7627,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e8e8ed1854de5d36c088ec1833beae40d2dedd76",
                 "reference": "e8e8ed1854de5d36c088ec1833beae40d2dedd76",
+=======
+            "version": "11.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit.git",
+                "reference": "0569902506a6c0878930b87ea79ec3b50ea563f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0569902506a6c0878930b87ea79ec3b50ea563f7",
+                "reference": "0569902506a6c0878930b87ea79ec3b50ea563f7",
+>>>>>>> Aplication-Gis
                 "shasum": ""
             },
             "require": {
@@ -7595,7 +7648,11 @@
                 "ext-mbstring": "*",
                 "ext-xml": "*",
                 "ext-xmlwriter": "*",
+<<<<<<< HEAD
                 "myclabs/deep-copy": "^1.12.0",
+=======
+                "myclabs/deep-copy": "^1.12.1",
+>>>>>>> Aplication-Gis
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.2",
@@ -7606,6 +7663,7 @@
                 "phpunit/php-timer": "^7.0.1",
                 "sebastian/cli-parser": "^3.0.2",
                 "sebastian/code-unit": "^3.0.1",
+<<<<<<< HEAD
                 "sebastian/comparator": "^6.1.1",
                 "sebastian/diff": "^6.0.2",
                 "sebastian/environment": "^7.2.0",
@@ -7614,6 +7672,17 @@
                 "sebastian/object-enumerator": "^6.0.1",
                 "sebastian/type": "^5.1.0",
                 "sebastian/version": "^5.0.2"
+=======
+                "sebastian/comparator": "^6.2.1",
+                "sebastian/diff": "^6.0.2",
+                "sebastian/environment": "^7.2.0",
+                "sebastian/exporter": "^6.3.0",
+                "sebastian/global-state": "^7.0.2",
+                "sebastian/object-enumerator": "^6.0.1",
+                "sebastian/type": "^5.1.0",
+                "sebastian/version": "^5.0.2",
+                "staabm/side-effects-detector": "^1.0.5"
+>>>>>>> Aplication-Gis
             },
             "suggest": {
                 "ext-soap": "To be able to generate mocks based on WSDL files"
@@ -7624,7 +7693,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-main": "11.4-dev"
+=======
+                    "dev-main": "11.5-dev"
+>>>>>>> Aplication-Gis
                 }
             },
             "autoload": {
@@ -7656,7 +7729,11 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.4.3"
+=======
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.0"
+>>>>>>> Aplication-Gis
             },
             "funding": [
                 {
@@ -7672,7 +7749,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-10-28T13:07:50+00:00"
+=======
+            "time": "2024-12-06T05:57:38+00:00"
+>>>>>>> Aplication-Gis
         },
         {
             "name": "sebastian/cli-parser",
@@ -8112,6 +8193,7 @@
         },
         {
             "name": "sebastian/exporter",
+<<<<<<< HEAD
             "version": "6.1.3",
             "source": {
                 "type": "git",
@@ -8122,6 +8204,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/c414673eee9a8f9d51bbf8d61fc9e3ef1e85b20e",
                 "reference": "c414673eee9a8f9d51bbf8d61fc9e3ef1e85b20e",
+=======
+            "version": "6.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/exporter.git",
+                "reference": "3473f61172093b2da7de1fb5782e1f24cc036dc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/3473f61172093b2da7de1fb5782e1f24cc036dc3",
+                "reference": "3473f61172093b2da7de1fb5782e1f24cc036dc3",
+>>>>>>> Aplication-Gis
                 "shasum": ""
             },
             "require": {
@@ -8130,7 +8224,11 @@
                 "sebastian/recursion-context": "^6.0"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "phpunit/phpunit": "^11.2"
+=======
+                "phpunit/phpunit": "^11.3"
+>>>>>>> Aplication-Gis
             },
             "type": "library",
             "extra": {
@@ -8178,7 +8276,11 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/exporter/issues",
                 "security": "https://github.com/sebastianbergmann/exporter/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/exporter/tree/6.1.3"
+=======
+                "source": "https://github.com/sebastianbergmann/exporter/tree/6.3.0"
+>>>>>>> Aplication-Gis
             },
             "funding": [
                 {
@@ -8186,7 +8288,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-07-03T04:56:19+00:00"
+=======
+            "time": "2024-12-05T09:17:50+00:00"
+>>>>>>> Aplication-Gis
         },
         {
             "name": "sebastian/global-state",
@@ -8598,6 +8704,61 @@
             "time": "2024-10-09T05:16:32+00:00"
         },
         {
+<<<<<<< HEAD
+=======
+            "name": "staabm/side-effects-detector",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/staabm/side-effects-detector.git",
+                "reference": "d8334211a140ce329c13726d4a715adbddd0a163"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/staabm/side-effects-detector/zipball/d8334211a140ce329c13726d4a715adbddd0a163",
+                "reference": "d8334211a140ce329c13726d4a715adbddd0a163",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/extension-installer": "^1.4.3",
+                "phpstan/phpstan": "^1.12.6",
+                "phpunit/phpunit": "^9.6.21",
+                "symfony/var-dumper": "^5.4.43",
+                "tomasvotruba/type-coverage": "1.0.0",
+                "tomasvotruba/unused-public": "1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A static analysis tool to detect side effects in PHP code",
+            "keywords": [
+                "static analysis"
+            ],
+            "support": {
+                "issues": "https://github.com/staabm/side-effects-detector/issues",
+                "source": "https://github.com/staabm/side-effects-detector/tree/1.0.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/staabm",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-10-20T05:08:20+00:00"
+        },
+        {
+>>>>>>> Aplication-Gis
             "name": "symfony/yaml",
             "version": "v7.2.0",
             "source": {
@@ -8670,6 +8831,7 @@
             "time": "2024-10-23T06:56:12+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "ta-tikoma/phpunit-architecture-test",
             "version": "0.8.4",
             "source": {
@@ -8729,6 +8891,8 @@
             "time": "2024-01-05T14:10:56+00:00"
         },
         {
+=======
+>>>>>>> Aplication-Gis
             "name": "theseer/tokenizer",
             "version": "1.2.3",
             "source": {
@@ -8781,12 +8945,21 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
+<<<<<<< HEAD
     "stability-flags": {},
+=======
+    "stability-flags": [],
+>>>>>>> Aplication-Gis
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
+<<<<<<< HEAD
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
+=======
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+>>>>>>> Aplication-Gis
 }

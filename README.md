@@ -7,6 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+<<<<<<< HEAD
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -64,3 +65,41 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# Instalasi
+## Aplikasi yang dibutuhkan
+
+- Node Js version 22.12.0
+- Composer
+- php version 8.4.1 **[link php](https://windows.php.net/download#php-8.4)** download yang **Thread Safe**
+- laragon [link laragon](https://laragon.org/download/)
+- Table Plus [link table plus](https://tableplus.com/download)
+
+:memo: **Note:** cara install nodejs, php, etc, di laragon nya gimana bisa lihat tutorial youtube [di sini](https://www.youtube.com/watch?v=nW60yGRoUrs&list=PLFIM0718LjIW1Xb7cVj7LdAr32ATDQMdr&index=2).
+
+
+
+
+
+
+
+## Cara install Laravel
+
+Karna kita pake laravel, dan sudah ada jadi tinggal **Pull** aja
+
+- Buat folder file baru di dalam **Laragon/www**
+    - Struktur folder laragon
+    ![alt text](Md-Image/image-2.png)
+    - lalu buat folder **laravel11**
+    ![alt text](Md-Image/image-3.png)
+- Kalau dah bisa tinggal pull aja lewat git bash atau download & extract 
+- jika sudah tinggal execute command `npm install` di terminal vscode
+
+![alt text](Md-Image/image-4.png)
+--
+:memo: **Note:** *perlu diperhatikan struktur folder sebelum `npm isntall`*.
+
+
+- Sudah terinstall tinggal coba di running `php artisan serve`
+
+>>>>>>> Aplication-Gis
