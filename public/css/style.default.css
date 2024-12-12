@@ -23,10 +23,8 @@ html, body {
 }
 
 #sidemenu {
-	position: absolute;
-	top: 60px;
-	bottom: 10px;
-	left: 5px;
+	
+	pointer-events: auto;
 	width: 270px;
 	opacity: 0.9;
 	filter: alpha(opacity=90); /* For IE8 and earlier */
@@ -34,10 +32,10 @@ html, body {
 	overflow: hidden;
 }
 #search-box {
-	position: absolute;
-	top: 60px;
+	pointer-events: auto;
 	left: 280px;
 }
+
 #app-nav-bar {
 	/*position: absolute;*/
 	display: block;
@@ -132,4 +130,12 @@ body.modal-open {
 
 .well {
 	background-color: #E5E1DA;
+}
+
+#list-group-container{
+	height: 0% !important;
+}
+
+.navbar {
+	margin-bottom: 0;
 }
