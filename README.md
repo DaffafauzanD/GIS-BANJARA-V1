@@ -21,22 +21,19 @@
 
 
 
-
-
-
 ## Cara install Laravel
 
 Karna kita pake laravel, dan sudah ada jadi tinggal **Pull** aja
 
 - Buat folder file baru di dalam **Laragon/www**
     - Struktur folder laragon
-    ![alt text](Md-Image/image-2.png)
+    ![alt text](storage/Md-Image/image-2.png)
     - lalu buat folder **laravel11**
-    ![alt text](Md-Image/image-3.png)
+    ![alt text](storage/Md-Image/image-3.png)
 - Kalau dah bisa tinggal pull aja lewat git bash atau download & extract 
 - jika sudah tinggal execute command `npm install` di terminal vscode
 
-![alt text](Md-Image/image-4.png)
+![alt text](storage/Md-Image/image-4.png)
 --
 :memo: **Note:** *perlu diperhatikan struktur folder sebelum `npm isntall`*.
 
