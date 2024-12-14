@@ -17,6 +17,8 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     @vite('resources/js/app.js')
     <style>
         #map {
@@ -49,7 +51,7 @@
                 <input type="text" class="form-control input-sm" id="searchText" placeholder="Search Location">
             </div>
             <button type="submit" class="btn btn-default btn-sm">
-                <i class="glyphicon glyphicon-search"></i>
+                <i class="bi bi-search"></i>
             </button>
         </form>
     </div>
@@ -57,28 +59,31 @@
     <div id="sidemenu-container">
         <div id="sidemenu" class="well">
             <div class="btn-group btn-group-justified btn-group-sm">
-                <a class="btn btn-default"> <i class="glyphicon glyphicon-fullscreen"></i> Fit in Window </a>
-                <a class="btn btn-default"> <i class="glyphicon glyphicon-filter"></i> Filter </a>
+                <a class="btn btn-default"> <i class="bi bi-filter"></i> Filter </a>
             </div>
             <div class="divider10"></div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>Filter by</p>
+                </div>
+            </div>
             <div class="panel panel-default">
                 <div class="panel-body">
                     <a>Sort By</a>
                 </div>
             </div>
             @if ($faskesData)
-            <div class="list-group point-list-view" id="list-group-container">
-                @foreach ($faskesData['features'] as $faskes)
-                    
+                <div class="list-group point-list-view" id="list-group-container"
+                    style="max-height: 400px; overflow-y: auto;">
+                    @foreach ($faskesData['features'] as $faskes)
                         <a href="#" class="list-group-item point-item">
                             <h4 class="list-group-item-heading">{{ $faskes['properties']['alamat'] }}</h4>
-                            <p class="list-group-item-text">
-                                Location Address
+                            <p class="list-group-item-text" id="coordinates-item">
+                                {{ implode(', ', $faskes['geometry']['coordinates']) }} <br>
                             </p>
                         </a>
-                  
-                @endforeach
-            </div>
+                    @endforeach
+                </div>
             @else
                 <p>No data available.</p>
             @endif
@@ -103,9 +108,6 @@
     <script src="ext/customScroll/js/jquery.mCustomScrollbar.min.js"></script>
     <script src="ext/customScroll/js/jquery.mousewheel.min.js"></script>
     <script src="js/application.js"></script>
-
-
-
     <script src="js\ConfigurationMap.js"></script>
 
 

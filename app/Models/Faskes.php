@@ -7,7 +7,7 @@ class Faskes
 {
     public static function getDataFromLocal()
     {
-        $path = storage_path('\Md-Image\faskes.geojson'); // Corrected extension
+        $path = storage_path('storage\app\public\Md-Image\faskes.geojson'); // Corrected extension
         
         if (file_exists($path)) {
             $json = file_get_contents($path);
