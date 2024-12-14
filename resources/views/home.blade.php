@@ -72,18 +72,21 @@
                     <a>Sort By</a>
                 </div>
             </div>
-            @if ($faskesData)
-                <div class="list-group point-list-view" id="list-group-container"
-                    style="max-height: 400px; overflow-y: auto;">
-                    @foreach ($faskesData['features'] as $faskes)
-                        <a href="#" class="list-group-item point-item">
-                            <h4 class="list-group-item-heading">{{ $faskes['properties']['alamat'] }}</h4>
-                            <p class="list-group-item-text" id="coordinates-item">
-                                {{ implode(', ', $faskes['geometry']['coordinates']) }} <br>
-                            </p>
-                        </a>
-                    @endforeach
-                </div>
+            @if ($faskesData && isset($faskesData['features']))
+                <div id="faskes-data">
+                    <div class="list-group point-list-view" id="list-group-container"
+                        style="max-height: 400px; overflow-y: auto;">
+                        @foreach ($faskesData['features'] as $faskes)
+                            <a href="#" class="list-group-item point-item">
+                                <h4 class="list-group-item-heading">
+                                    {{ $faskes['properties']['nama_faskes'] ?? 'Nama tidak tersedia' }}</h4>
+                                <p class="list-group-item-text">
+                                    {{ implode(', ', $faskes['geometry']['coordinates']) }}
+                                </p>
+                            </a>
+                        @endforeach
+                    </div>
+                </div> 
             @else
                 <p>No data available.</p>
             @endif
