@@ -6,24 +6,41 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
+use App\Models\Faskes;
 
 class FaskesController extends Controller
 {
     public function index()
     {
         try {
-            // Ensure the file path is correct
-            $path = storage_path('app/private/Md-Image/faskes.geojson');
-            if (file_exists($path)) {
-                $json = file_get_contents($path);
-                $faskesData = json_decode($json, true);
-                if ($faskesData === null) {
-                    throw new \Exception('Error decoding JSON: ' . json_last_error_msg());
-                }
-            } else {
-                throw new \Exception('File not found: ' . $path);
-            }
-            return view('home', ['faskesData' => $faskesData]);
+            // Fetch data from the database
+            $faskesData = Faskes::all();
+
+            // Convert the data to the format expected by the view
+            $faskesDataArray = $faskesData->map(function ($item) {
+                return [
+                    'type' => 'Feature',
+                    'geometry' => [
+                        'type' => 'Point',
+                        'coordinates' => [
+                            $item->longitude,
+                            $item->latitude,
+                            0
+                        ]
+                    ],
+                    'properties' => [
+                        'kode_faskes' => $item->kode_faskes,
+                        'nama_faskes' => $item->nama_faskes,
+                        'kode_desa' => $item->kode_desa,
+                        'kode_kategori' => $item->kode_kategori,
+                        'kode_jenis' => $item->kode_jenis,
+                        'alamat' => $item->alamat,
+                        'no_telp' => $item->no_telp,
+                    ]
+                ];
+            });
+
+            return view('home', ['faskesData' => ['features' => $faskesDataArray]]);
         } catch (\Exception $e) {
             // Log the error message
             Log::error($e->getMessage());
@@ -34,21 +51,33 @@ class FaskesController extends Controller
     public function getGeoJson()
     {
         
-        // Pastikan file ada di storage
-        if (Storage::exists('Md-Image/faskes.geojson')) {
-            // Ambil data GeoJSON dari storage
-            // $data1 = Storage::disk('local')->get('faskes.geojson');
-             $data = Storage::get('Md-Image/faskes.geojson');
+        $faskes = Faskes::all();
 
-             $faskesData = json_decode($data, true);
-            
-            // Ubah string JSON ke format yang sesuai dan kembalikan respons
-            return response()->json(json_decode($data), Response::HTTP_OK);
-            
-        
-        } else {
-            // Jika file tidak ditemukan, kembalikan error 404
-            return response()->json(['error' => 'File not found'], Response::HTTP_NOT_FOUND);
-        }
+        $geoJson = [
+            'type' => 'FeatureCollection',
+            'features' => $faskes->map(callback: function (Faskes $item): array {
+                return [
+                    'type' => 'Feature',
+                    'geometry' => [
+                        'type' => 'Point',
+                        'coordinates' => [
+                            $item->longitude,
+                            $item->latitude,
+                            0
+                        ]
+                    ],
+                    'properties' => [
+                        'nama_faskes' => $item->nama_faskes,
+                        'kode_desa' => $item->kode_desa,
+                        'kode_kategori' => $item->kode_kategori,
+                        'kode_jenis' => $item->kode_jenis,
+                        'alamat' => $item->alamat,
+                        'no_telp' => $item->no_telp,
+                    ]
+                ];
+            }),
+        ];
+
+        return response()->json(data: $geoJson, status: Response::HTTP_OK);
     }
 }
