@@ -85,10 +85,10 @@
                 <div class="card-body">
                     <a>Filter by</a>
                     <div class="d-flex flex-column flex-wrap mb-3">
-                        <a href="/home" class="btn text-light bg-secondary mb-3 mt-3" id="filter_kategori_1">show all</a>
-                        <a href="{{ url('/home/filterByKodeKategori/1') }}" class="btn text-light bg-secondary mb-3" id="filter_kategori_1">Filter by Kode Kategori 1</a>
-                        <a href="{{ url('/home/filterByKodeKategori/2') }}" class="btn text-light bg-secondary mb-3">Filter by Kode Kategori 2</a>
-                        <a href="{{ url('/home/filterByKodeKategori/3') }}" class="btn text-light bg-secondary mb-3">Filter by Kode Kategori 3</a>
+                        <a href="#" class="btn text-light bg-secondary mb-3 mt-3 filter-btn" data-kode-kategori="all">Show all</a>
+                        <a href="#" class="btn text-light bg-secondary mb-3 filter-btn" data-kode-kategori="1">Filter by Kode Kategori 1</a>
+                        <a href="#" class="btn text-light bg-secondary mb-3 filter-btn" data-kode-kategori="2">Filter by Kode Kategori 2</a>
+                        <a href="#" class="btn text-light bg-secondary mb-3 filter-btn" data-kode-kategori="3">Filter by Kode Kategori 3</a>
                     </div>
                 </div>
             </div>
@@ -98,33 +98,9 @@
                     <a>Sort By</a>
                 </div>
             </div>
-            @if ($faskesData && isset($faskesData['features']))
-                <div id="faskes-data">
-                    <div class="list-group point-list-view" id="list-group-container"
-                        style="max-height: 400px; overflow-y: auto;">
-                        @foreach ($faskesData['features'] as $faskes)
-                            <a href="#" class="list-group-item point-item">
-                                <h4 class="list-group-item-heading">
-                                    {{ $faskes['properties']['nama_faskes'] ?? 'Nama tidak tersedia' }}</h4>
-                                <p class="list-group-item-text">
-                                    {{ implode(', ', $faskes['geometry']['coordinates']) }}
-                                </p>
-                                <p class="list-group-item-text">
-                                    {{ $faskes['properties']['alamat'] ?? 'Alamat tidak tersedia' }}
-                                </p>
-                                <p class="list-group-item-text">
-                                    {{ $faskes['properties']['no_telp'] ?? 'Telepon tidak tersedia' }}
-                                </p>
-                            </a>
-                        @endforeach
-                    </div>
-                </div>
-                <script>
-                    var faskesData = @json($faskesData);
-                </script>
-            @else
-                <p>No data available.</p>
-            @endif
+            <div id="faskes-data">
+                <!-- Faskes data will be dynamically inserted here -->
+            </div>
         </div>
     </div>
 

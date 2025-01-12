@@ -61,7 +61,19 @@ class FaskesController extends Controller
             // Convert the data to GeoJSON format
             $geoJson = $this->fetchFaskesData($faskesData->getCollection());
 
-            return view(self::VIEW_NAME, ['faskesData' => $geoJson, 'pagination' => $faskesData->links()]);
+            // Check for the 'format' query parameter
+            $format = $request->query('format', 'view');
+
+            if ($format === 'json') {
+                return response()->json([
+                    'faskesData' => $geoJson,
+                    'pagination' => $faskesData->links()->toHtml()
+                ], Response::HTTP_OK);
+            } elseif ($format === 'geojson') {
+                return response()->json($geoJson, Response::HTTP_OK);
+            } else {
+                return view(self::VIEW_NAME, ['faskesData' => $geoJson, 'pagination' => $faskesData->links()]);
+            }
         } catch (\Exception $e) {
             // Log the error message
             Log::error('Error in FaskesController@index: ' . $e->getMessage());
@@ -112,11 +124,24 @@ class FaskesController extends Controller
         return view(self::VIEW_NAME, ['faskesData' => $geoJson]);
     }
 
-    public function filterByKodeKategori($kodeKategori)
+    public function filterByKodeKategori($kodeKategori, Request $request)
     {
-        $faskesData = Faskes::filterByKodeKategori($kodeKategori);
-        $geoJson = $this->fetchFaskesData($faskesData);
+        try {
+            $faskesData = Faskes::filterByKodeKategori($kodeKategori);
+            $geoJson = $this->fetchFaskesData($faskesData);
 
-        return view(self::VIEW_NAME, ['faskesData' => $geoJson]);
+            // Check for the 'format' query parameter
+            $format = $request->query('format', 'view');
+
+            if ($format === 'geojson') {
+                return response()->json($geoJson, Response::HTTP_OK);
+            } else {
+                return view(self::VIEW_NAME, ['faskesData' => $geoJson]);
+            }
+        } catch (\Exception $e) {
+            // Log the error message
+            Log::error('Error in FaskesController@filterByKodeKategori: ' . $e->getMessage());
+            return view(self::VIEW_NAME, ['faskesData' => ['features' => []]]);
+        }
     }
 }
