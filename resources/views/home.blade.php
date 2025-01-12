@@ -99,7 +99,7 @@
                 </div>
             </div>
             <div id="faskes-data">
-                <!-- Faskes data will be dynamically inserted here -->
+                
             </div>
         </div>
     </div>
