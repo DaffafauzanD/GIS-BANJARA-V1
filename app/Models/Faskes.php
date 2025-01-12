@@ -57,4 +57,20 @@ class Faskes extends Model
             'longitude' => $this->longitude,
         ];
     }
+
+    public static function filterByKodeDesa($kodeDesa)
+    {
+        return self::where('kode_desa', $kodeDesa)->get();
+    }
+
+    public static function filterByKodeKategori($kodeKategori)
+    {
+        return self::where('kode_kategori', $kodeKategori)->get();
+    }
+    
+    // Add the filterByNamaFaskes method
+    public static function filterByNamaFaskes($namaFaskes)
+    {
+        return self::where('nama_faskes', 'like', '%' . $namaFaskes . '%')->get();
+    }
 }

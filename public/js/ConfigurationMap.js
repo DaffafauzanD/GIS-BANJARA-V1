@@ -1,40 +1,63 @@
-var map = L.map('map').setView([-7.047736112975044, 107.58393418897262], 13);
+// Initialize the map
+const map = L.map('map').setView([-7.047736112975044, 107.58393418897262], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// L.marker([-7.047736112975044,107.58393418897262]).addTo(map)
-//     .bindPopup('A pretty CSS popup.<br> Easily customizable.')
-//     .openPopup();
-
-
-// URL endpoint API
-const apiUrl = '/api/faskes';
-
-// Mengambil data GeoJSON dan menambahkannya ke peta Leaflet
-fetch(apiUrl)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-        }
-        return response.json();
-    })
-    .then(geojsonData => {
-        // Menambahkan GeoJSON ke peta
-        L.geoJSON(geojsonData, {
-            onEachFeature: function (feature, layer) {
-                if (feature.properties) {
-                    let popupContent = `
-                        <h4>${feature.properties.alamat}</h4>
-                        <p><strong>Kode Desa:</strong> ${feature.properties.kode_desa}</p>
-                        <p><strong>No Telp:</strong> ${feature.properties.no_telp}</p>
-                    `;
-                    layer.bindPopup(popupContent);
-                }
+// Add GeoJSON data to the map
+function addGeoJsonToMap(faskesData) {
+    L.geoJSON(faskesData, {
+        onEachFeature: function (feature, layer) {
+            if (feature.properties) {
+                let popupContent = `
+                    <h4>${feature.properties.alamat}</h4>
+                    <p><strong>Kode Desa:</strong> ${feature.properties.kode_desa}</p>
+                    <p><strong>No Telp:</strong> ${feature.properties.no_telp}</p>
+                `;
+                layer.bindPopup(popupContent);
             }
-        }).addTo(map);
-    })
-    .catch(error => {
-        console.error('Error fetching GeoJSON:', error);
-    });
+        }
+    }).addTo(map);
+}
+
+// Fetch data from the API endpoint and add it to the map
+document.addEventListener('DOMContentLoaded', function () {
+    
+        fetch('/api/faskes')
+            .then(response => response.json())
+            .then(data => {
+                addGeoJsonToMap(data);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+
+});
+
+
+
+// Fungsi untuk menyisipkan elemen ke dalam kontrol Leaflet
+function injectCustomDiv() {
+    // Cari elemen dengan kelas 'leaflet-top leaflet-left'
+    var leafletTopLeft = document.querySelector('.leaflet-top.leaflet-left');
+
+    const element = document.querySelector('.leaflet-control-zoom');
+    if (element) {
+        element.id = 'Myzoom';
+    }
+    if (leafletTopLeft) {
+        var sidemenu = document.getElementById('sidemenu-container');
+        var searchBox = document.getElementById('search-box');
+        var zoomControl = document.getElementById('Myzoom');
+
+        if (leafletTopLeft && sidemenu) {
+            leafletTopLeft.appendChild(searchBox); // Sisipkan ke Leaflet control container
+            leafletTopLeft.appendChild(zoomControl); // Sisipkan ke Leaflet control container
+            leafletTopLeft.appendChild(sidemenu); // Sisipkan ke Leaflet control container
+        }
+    }
+}
+
+// Panggil fungsi setelah peta dimuat
+map.whenReady(injectCustomDiv);

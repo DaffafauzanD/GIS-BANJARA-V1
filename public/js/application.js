@@ -61,4 +61,17 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Element dengan ID "list-group-container" tidak ditemukan.');
     }
+
+    const filterBy = document.getElementById('filter-by');
+    const filterButton = document.getElementById('filter-button');
+    filterBy.style.display = 'none';
+
+    filterButton.addEventListener('click', function() {
+        if (filterBy.style.display == 'none'){
+            filterBy.style.display = 'block'
+        }else{
+            filterBy.style.display = 'none'
+        }
+    });
+
 });
