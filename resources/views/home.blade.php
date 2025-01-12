@@ -119,6 +119,9 @@
                         @endforeach
                     </div>
                 </div>
+                <script>
+                    var faskesData = @json($faskesData);
+                </script>
             @else
                 <p>No data available.</p>
             @endif

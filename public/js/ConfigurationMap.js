@@ -21,21 +21,14 @@ function addGeoJsonToMap(faskesData) {
     }).addTo(map);
 }
 
-// Fetch data from the API endpoint and add it to the map
+// Fetch data from the embedded JavaScript variable and add it to the map
 document.addEventListener('DOMContentLoaded', function () {
-    
-        fetch('/api/faskes')
-            .then(response => response.json())
-            .then(data => {
-                addGeoJsonToMap(data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-
+    if (typeof faskesData !== 'undefined') {
+        addGeoJsonToMap(faskesData);
+    } else {
+        console.error('faskesData is not defined');
+    }
 });
-
-
 
 // Fungsi untuk menyisipkan elemen ke dalam kontrol Leaflet
 function injectCustomDiv() {

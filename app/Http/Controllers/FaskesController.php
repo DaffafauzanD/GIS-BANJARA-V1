@@ -117,10 +117,6 @@ class FaskesController extends Controller
         $faskesData = Faskes::filterByKodeKategori($kodeKategori);
         $geoJson = $this->fetchFaskesData($faskesData);
 
-        if (request()->ajax()) {
-            return response()->json($geoJson);
-        }
-
         return view(self::VIEW_NAME, ['faskesData' => $geoJson]);
     }
 }
