@@ -41,6 +41,7 @@ html, body {
 	/*position: absolute;*/
 	display: block;
 	width: 100%;
+	background-color: #E5E1DA;
 }
 .point-list-view {
 	/*overflow-y: scroll;*/
@@ -139,4 +140,35 @@ body.modal-open {
 
 .navbar {
 	margin-bottom: 0;
+}
+
+.navbar-nav{
+	flex-direction: row;
+}
+
+#map {
+	height: 917px;
+	width: 100%;
+
+}
+
+
+.leaflet-top.leaflet-left {
+	display: flex;
+	flex-direction: row-reverse;
+
+	padding-left: 20px;
+	/* Mengatur elemen sejajar horizontal */
+	align-items: baseline;
+	/* Menyelaraskan elemen ke atas */
+}
+
+body {
+	padding-top: 56px;
+	/* Adjust this value based on the height of your navbar */
+}
+
+#list-group-container{
+	max-height: 400px important!; 
+	overflow-y: auto important!;
 }
