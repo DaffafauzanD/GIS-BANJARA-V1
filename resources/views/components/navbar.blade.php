@@ -12,16 +12,14 @@
                 <li class="nav-item active">
                     <a class="nav-link fs-5" href="/home">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-5" href="#">Browse</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link fs-5 dropdown-toggle" href="#" id="applicationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Application
                     </a>
                     <ul class="dropdown-menu rounded" aria-labelledby="applicationDropdown">
+                        <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#">Manage</a></li>
                         <li><a class="dropdown-item" href="#">Setting</a></li>
-                        <li><a class="dropdown-item" href="#">Manage User</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
