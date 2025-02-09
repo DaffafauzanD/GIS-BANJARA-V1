@@ -23,4 +23,17 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 
+        // Initialize DataTables
+        $('#datatablesSimple').DataTable({
+            ajax: {
+                url: '/faskes/data',
+                dataSrc: 'data'
+            },
+            columns: [
+                { data: 'id' },
+                { data: 'nama_faskes' },
+                { data: 'kode_kategori' },
+                { data: 'kode_desa' }
+            ]
+        });
 });

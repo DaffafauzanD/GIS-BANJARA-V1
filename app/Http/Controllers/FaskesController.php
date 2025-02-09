@@ -111,6 +111,17 @@ class FaskesController extends Controller
         }
     }
 
+    public function getAllData()
+{
+    try {
+        $faskesData = Faskes::all();
+        return response()->json(data: ['data' => $faskesData], status: Response::HTTP_OK);
+    } catch (\Exception $e) {
+        Log::error(message: 'Error fetching data: ' . $e->getMessage());
+        return response()->json(data: ['error' => 'Failed to retrieve data'], status: Response::HTTP_INTERNAL_SERVER_ERROR);
+    }
+}
+
     /**
      * Filter Faskes by name.
         

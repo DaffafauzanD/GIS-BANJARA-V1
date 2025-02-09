@@ -11,6 +11,7 @@ Route::get('/home', [FaskesController::class, 'index']);
 
 Route::get('/dashboard', [FaskesController::class, 'dashboard']);
 
+Route::get('/faskes/data', [FaskesController::class, 'getAllData']);
 
 Route::get('/home/filterByKodeKategori/{kodeKategori}', [FaskesController::class, 'filterByKodeKategori']);
 
