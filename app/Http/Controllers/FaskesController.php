@@ -35,7 +35,7 @@ class FaskesController extends Controller
                         ]
                     ],
                     'properties' => [
-                        'kode_faskes' => $item->kode_faskes,
+                        'id' => $item->id,
                         'nama_faskes' => $item->nama_faskes,
                         'kode_desa' => $item->kode_desa,
                         'kode_kategori' => $item->kode_kategori,

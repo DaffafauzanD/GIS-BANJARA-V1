@@ -2,12 +2,39 @@
 Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#292b2c';
 
+// Fetch data from the server and add it to the map
+function fetchDataAndAddToMap(kodeKategori = 'all') {
+  let url = '/home?format=geojson';
+  if (kodeKategori !== 'all') {
+      url = `/home/filterByKodeKategori/${kodeKategori}?format=geojson`;
+  }
+
+  fetch(url)
+      .then(response => response.json())
+      .then(data => {
+          console.log('Data from the server:', data);
+         
+          createChart(data); // Create chart with the fetched data
+         
+      })
+      .catch(error => {
+          console.error('Error fetching data:', error);
+      });
+}
+
+fetchDataAndAddToMap();
+
+function createChart(faskesData){
+  const labels = faskesData.features.map(faskes => faskes.properties.kode_kategori);
+  const data = faskesData.features.map(faskes => faskes.properties.kode_desa); // Example data, modify as needed
+
+console.log('Labels:', labels);
 // Area Chart Example
 var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Mar 1", "Mar 2", "Mar 3", "Mar 4", "Mar 5", "Mar 6", "Mar 7", "Mar 8", "Mar 9", "Mar 10", "Mar 11", "Mar 12", "Mar 13"],
+    labels: data,
     datasets: [{
       label: "Sessions",
       lineTension: 0.3,
@@ -20,7 +47,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBackgroundColor: "rgba(2,117,216,1)",
       pointHitRadius: 50,
       pointBorderWidth: 2,
-      data: [10000, 30162, 26263, 18394, 18287, 28682, 31274, 33259, 25849, 24159, 32651, 31984, 38451],
+      data: labels,
     }],
   },
   options: {
@@ -39,7 +66,7 @@ var myLineChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 40000,
+          max: 10,
           maxTicksLimit: 5
         },
         gridLines: {
@@ -52,3 +79,4 @@ var myLineChart = new Chart(ctx, {
     }
   }
 });
+}

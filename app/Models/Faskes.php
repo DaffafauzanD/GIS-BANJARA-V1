@@ -14,7 +14,7 @@ class Faskes extends Model
 
     // Atribut yang dapat diisi secara massal
     protected $fillable = [
-        'kode_faskes',
+        'id',
         'nama_faskes',
         'kode_desa',
         'kode_kategori',
