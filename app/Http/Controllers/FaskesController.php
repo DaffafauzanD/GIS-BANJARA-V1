@@ -86,6 +86,11 @@ class FaskesController extends Controller
         return view('dashboard');
     }
 
+    public function usermanager()
+    {
+        return view('usermanager');
+    }
+
     /**
      * Retrieve Faskes data in GeoJSON format.
      *
