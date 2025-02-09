@@ -10870,6 +10870,7 @@ body {
   transform: translateX(-225px);
 }
 #layoutSidenav #layoutSidenav_content {
+  background: #B3C8CF;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11240,4 +11241,46 @@ body {
   width: 20px !important;
   font-size: 0.75rem;
   border-radius: 0.375rem !important;
+}
+
+.bg-alabaster{
+  background: #F1F0E8;
+}
+
+.bg-whitecoffee{
+  background: #E5E1DA;
+}
+
+.sb-sidenav-alabaster {
+  background-color: #F1F0E8;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-sidenav-alabaster .sb-sidenav-menu .sb-sidenav-menu-heading {
+  color: rgb(0 0 0 / 77%);
+}
+.sb-sidenav-alabaster .sb-sidenav-menu .nav-link {
+  color: rgb(0 0 0 / 77%);
+}
+.sb-sidenav-alabaster .sb-sidenav-menu .nav-link .sb-nav-link-icon {
+  color: rgb(0 0 0 / 77%);
+}
+.sb-sidenav-alabaster .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
+  color: rgb(0 0 0 / 77%);
+}
+.sb-sidenav-alabaster .sb-sidenav-menu .nav-link:hover {
+  color: #171716;
+}
+.sb-sidenav-alabaster .sb-sidenav-menu .nav-link.active {
+  color: #fff;
+}
+.sb-sidenav-alabaster .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
+  color: #171716;
+}
+.sb-sidenav-alabaster .sb-sidenav-footer {
+  background-color: #343a40;
+}
+
+.bg-pastelblue{
+  background: #B3C8CF;
 }
