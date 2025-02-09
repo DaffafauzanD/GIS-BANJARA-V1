@@ -20,10 +20,6 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Manage Points
                 </a>
-                <a class="nav-link" href="index.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Settings
-                </a>
             </div>
         </div>
         <div class="sb-sidenav-footer">
