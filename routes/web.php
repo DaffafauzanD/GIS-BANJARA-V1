@@ -10,6 +10,7 @@ Route::get('/', function () {
 Route::get('/home', [FaskesController::class, 'index']);
 
 Route::get('/dashboard', [FaskesController::class, 'dashboard']);
+Route::get('/usermanager', [FaskesController::class, 'usermanager']);
 
 
 Route::get('/home/filterByKodeKategori/{kodeKategori}', [FaskesController::class, 'filterByKodeKategori']);
