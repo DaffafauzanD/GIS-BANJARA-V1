@@ -16,7 +16,7 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Manage Users
                 </a>
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/managepoint">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Manage Points
                 </a>

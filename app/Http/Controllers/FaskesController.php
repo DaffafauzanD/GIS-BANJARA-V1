@@ -91,6 +91,11 @@ class FaskesController extends Controller
         return view('usermanager');
     }
 
+    public function managepoint()
+    {
+        return view('managepoint');
+    }
+
     /**
      * Retrieve Faskes data in GeoJSON format.
      *
